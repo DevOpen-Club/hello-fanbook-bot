@@ -1,0 +1,27 @@
+{
+  "id": "56a5beda-72fc-4a30-8a28-33063aff3269",
+  "data": {
+    "authority": {
+      "icon": "https://fb-cdn.fanbook.mobi/fanbook/app/files/service/headImage/fa7d982573d772bcfc9f45a4d39d45b7.jpg",
+      "name": "Hello Fanbook Bot"
+    },
+    "slots": [
+      [
+        {
+          "label": "头衔徽章",
+          "value": "Collaborator",
+          "badge": "https://fb-cdn.fanbook.mobi/fanbook/app/files/chatroom/image/9665da8553a71124c66d3e8819493c4f.png"
+        }
+      ],
+      [
+        {
+          "label": "头衔介绍",
+          "value": "Hello Fanbook Bot 项目贡献者"
+        }
+      ]
+    ],
+    "title": {
+      "img": "https://fb-cdn.fanbook.mobi/fanbook/app/files/chatroom/image/9665da8553a71124c66d3e8819493c4f.png"
+    }
+  }
+}

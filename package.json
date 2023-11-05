@@ -1,0 +1,22 @@
+{
+  "name": "hello-fanbook-bot",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint scripts/**/*.ts",
+    "people": "ts-node scripts/people.ts"
+  },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "fanbook-api-node-sdk": "^0.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.53.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
