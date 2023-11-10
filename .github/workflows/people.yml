@@ -1,0 +1,50 @@
+name: 职位变更
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: 操作
+        type: choice
+        required: true
+        options:
+          - 添加
+          - 移除
+      level:
+        description: 职位
+        type: choice
+        required: true
+        options:
+          - Collaborator
+          - Maintainer
+          - Member
+      fanbookId:
+        description: Fanbook ID
+        required: true
+jobs:
+  people:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v3
+      - name: 初始化 Node.js 环境
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: 安装包管理器
+        uses: pnpm/action-setup@v2.4.0
+        with:
+          version: 8.3.1
+      - name: 获取缓存
+        uses: actions/cache@v3
+        with:
+          key: node_modules
+          path: node_modules
+      - name: 安装依赖
+        run: pnpm install
+      - name: 执行脚本
+        run: pnpm people
+        env:
+          FANBOOK_BOT_TOKEN: ${{ secrets.FANBOOK_BOT_TOKEN }}
+          TYPE: ${{ inputs.type }}
+          LEVEL: ${{ inputs.level }}
+          FANBOOK_ID: ${{ inputs.fanbookId }}

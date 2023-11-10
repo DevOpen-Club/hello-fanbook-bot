@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "curly": [2, "multi-line"],
+    "eol-last": [2, "always"],
+    "no-console": [2],
+    "semi": [2, "always"],
+    "@typescript-eslint/no-explicit-any": [0]
+  }
+}
